@@ -35,10 +35,16 @@
   <!-- Featured Projects -->
   <section id="projects" class="section">
     <h2 class="section-title">Featured Projects</h2>
+    <!-- Project Filter Buttons -->
+<div class="project-filters">
+  <button class="filter-btn active" data-filter="all">All Projects</button>
+  <button class="filter-btn" data-filter="systems">Systems & C++</button>
+  <button class="filter-btn" data-filter="fullstack">Full-Stack & Web</button>
+</div>
     <div class="projects-grid">
       <!-- VaultCLI Card -->
 <!-- VaultCLI Card -->
-<div class="project-card">
+<div class="project-card" data-category="systems">
   <div class="project-tag">Systems & Security Utility</div>
   <h3>VaultCLI — C++ Security Utility</h3>
   <p>A high-performance C++ command-line tool featuring rotating XOR passphrase encryption, custom header signature verification, and automated key integrity checks to prevent file corruption.</p>
@@ -54,7 +60,7 @@
   </div>
 </div>
       <!-- VaultX Card -->
-      <div class="project-card featured">
+     <div class="project-card featured" data-category="fullstack">
         <div class="project-tag">Featured Full-Stack App</div>
         <h3>VaultX — Game Discovery & Collection Tracker</h3>
         <p>A web platform enabling users to search live games, track discount deals, and manage personal cloud watchlists with Row-Level Security, user authentication, and public profile handles.</p>

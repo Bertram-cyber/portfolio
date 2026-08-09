@@ -382,3 +382,36 @@ footer {
     gap: 16px;
   }
 }
+
+/* Project Filters Styling */
+.project-filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #a0aec0;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #00d2ff;
+  color: #0d1117;
+  border-color: #00d2ff;
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(0, 210, 255, 0.4);
+}
+
+.project-card.hide {
+  display: none !important;
+}
