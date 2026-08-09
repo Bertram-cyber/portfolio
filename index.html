@@ -41,6 +41,17 @@
   <button class="filter-btn" data-filter="systems">Systems & C++</button>
   <button class="filter-btn" data-filter="fullstack">Full-Stack & Web</button>
 </div>
+
+<!-- Project Search Bar -->
+<div class="search-container" style="max-width: 500px; margin: 0 auto 2rem auto;">
+  <input 
+    type="text" 
+    id="projectSearch" 
+    placeholder="🔍 Search projects (e.g. C++, Winsock, Supabase)..." 
+    style="width: 100%; padding: 0.75rem 1.25rem; font-size: 1rem; border-radius: 25px; border: 1px solid #333; background: #1a1a1a; color: #fff; outline: none;"
+  />
+</div>
+
     <div class="projects-grid">
       <!-- VaultCLI Card -->
 <!-- VaultCLI Card -->
@@ -102,6 +113,29 @@
     </div>
 
   </div> <!-- Closing tag for projects-grid -->
+
+  <!-- NetScan Card -->
+    <div class="project-card" data-category="systems">
+      ...
+    </div>
+
+    <!-- CipherCLI Card -->
+    <div class="project-card" data-category="systems">
+      <div class="project-tag">Systems & Security</div>
+      <h3>CipherCLI — C++ File Encryptor</h3>
+      <p>A fast C++ command-line file encryption utility using stream key-XOR transformations for lightweight file security.</p>
+      <div class="tech-tags">
+        <span>C++17</span>
+        <span>File I/O</span>
+        <span>Cryptography</span>
+        <span>Git</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Bertram-cyber/cipher-cli" target="_blank" class="btn-link">GitHub Repository 💻</a>
+      </div>
+    </div>
+
+  </div> <!-- Closing tag for projects-grid -->
   </section>
 
   <!-- Skills Section -->
@@ -143,5 +177,21 @@
   </footer>
 
   <script src="app.js"></script>
+
+  <script>
+  const searchInput = document.getElementById('projectSearch');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      const projectCards = document.querySelectorAll('.project-card');
+
+      projectCards.forEach(card => {
+        const cardText = card.textContent.toLowerCase();
+        card.style.display = cardText.includes(query) ? 'block' : 'none';
+      });
+    });
+  }
+</script>
+
 </body>
 </html>
